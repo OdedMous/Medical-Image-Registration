@@ -9,18 +9,21 @@
 The goal of this project is to implement automatic registration algorithms between two retinal 2D scans. Two different techniques are used: geometry-based registration and intensity-based registration.
 
 ## Background
+
+**Registration in Medicine**
+
 Two different images of a patient, taken at two different times, usually have significant movement between them.
 This is because the patient is in different poses, because of internal movements, e.g., breathing, and because of other
 physical changes that occurred in the time that passed between the scans. Registering the two images is needed to
 compare the content, e.g., track the differences, or to evaluate the efficacy of a treatment.
 
-In this project we ue retinal 2D scans
+In this project we ue retinal 2D scans: one is a base-line image an the second is an image that was taken later on (a follow-up image).
 
+**Rigid Registration**
 
-Rigid registration consists of computing the translation and rotation that aligns two images assuming that the
-anatomical structures of interest retain their shape. Rigid registration of 2D images requires computing three
-parameters: two translations and one rotation, while 3D scans requires computing six parameters: three translations
-and three rotations.
+In this project we assume that the anatomical structures of interest in the images retain their shape, and hence a rigid transform is sufficient to align the two images. 
+Rigid registration consists of computing the translation and rotation. Rigid registration of 2D images requires computing three
+parameters: two translations and one rotation.
 
 Rigid registration algorithms can be categorized into two groups: geometry and intensity based. In geometric-based
 algorithms, the features to be matched, e.g. points, are first identified in each image and then paired. The sum of the
