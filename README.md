@@ -1,6 +1,6 @@
 # Medical-Image-Registration
 
-![pic](../master/images/pic1.PNG)
+![pic](../master/images/pic1.png)
 
 
 ## Goal
