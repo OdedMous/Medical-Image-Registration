@@ -14,13 +14,18 @@ The goal of this project is to implement automatic registration algorithms betwe
 
 Usually, there is significant movement between two images of the same patient taken at two different times. This is because the patient is in different poses, because of internal movements (e.g., breathing) and because of other physical changes that occurred in the time that passed between the scans. **Registering** the images allows one to perform a comparison between them, e.g. to track the differences, or to evaluate the efficacy of a treatment when baseline and follow-up images are provided.
 
-In this project we used pairs of **retinal 2D scans** of patients who suffered from age related macular degeneration (AMD), a condition of retinal atrophy that causes vision loss. The first scan in each pair is a baseline image and the second is an image that was taken later on in time in order to examine how the condition has evolved.
+In this project we used pairs of **retinal 2D scans** of patients who suffered from age-related macular degeneration (AMD), an eye disease that causes vision loss. The first scan in each pair is a baseline image and the second is an image that was taken later on in time in order to examine how the disease has evolved.
+
+![image](https://user-images.githubusercontent.com/68702877/174074532-bb739f79-4683-4edd-ae1f-fcb19ecbecb7.png)
 
 **Rigid Registration**
 
 In this project we assume that the anatomical structures of interest in the images retain their shape, and hence a rigid transform is sufficient to align the two images. 
 Rigid registration consists of computing the translation and rotation. Rigid registration of 2D images requires computing **three
 parameters**: two translations and one rotation.
+
+![tempFileForShare_20220616-155509](https://user-images.githubusercontent.com/68702877/174074392-38df3481-a57e-4b2f-855e-714e047b65de.jpg)
+
 
 Rigid registration algorithms can be categorized into two groups: **geometry** and **intensity based**. In geometric-based
 algorithms, the features to be matched, e.g. points, are first identified in each image and then paired. The sum of the
