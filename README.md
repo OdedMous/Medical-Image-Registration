@@ -10,11 +10,16 @@ The goal of this project is to implement an automatic registration between two o
 
 
 
+## Feature-based Registration
+
+![image](https://user-images.githubusercontent.com/68702877/174043592-1e24971b-9372-45d7-9dbd-ee24d6315115.png)
 
 
-![image](https://user-images.githubusercontent.com/68702877/174042930-5048ac5d-a49c-4496-9440-a4e75d632318.png)
+![image](https://user-images.githubusercontent.com/68702877/174043318-035b3866-604e-44e2-84d0-2f09e7945f8b.png)
 
+Matches after steps 1-3. Red dots that has no  green line which connects between them are outliers matches.
 
+## Intensity-based Registration
 
 
 
@@ -27,3 +32,7 @@ The goal of this project is to implement an automatic registration between two o
 |![image](https://user-images.githubusercontent.com/68702877/174041307-9f68cced-cb15-4fb8-999e-a859782e451e.png)|![image](https://user-images.githubusercontent.com/68702877/174041338-0b7de23c-90d3-4a4a-870a-3149c1538c6f.png)|![image](https://user-images.githubusercontent.com/68702877/174041353-a6a398d8-01fa-44b6-a772-46cf6b0e77fd.png)|
 | G | H | I |
 |![image](https://user-images.githubusercontent.com/68702877/174041452-74005e24-5127-4ae1-9c6c-a1ded06ffac3.png)|![image](https://user-images.githubusercontent.com/68702877/174041478-25a51513-c6a3-4009-9a50-88d0227a5001.png)|![image](https://user-images.githubusercontent.com/68702877/174041488-437caf62-086b-4345-8eb3-e2f6ac85b048.png)|
+
+
+![image](https://user-images.githubusercontent.com/68702877/174043801-bec60e1f-e53b-4ef6-8bb7-31d3edfb7455.png)
+
