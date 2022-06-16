@@ -1,6 +1,6 @@
 # Medical-Image-Registration
 
-| Baseline image | Follow-Up image (registrated) | Combined |
+| Base-Line image | Follow-Up image (registrated) | Combined |
 | ---  | ---  |  :----:  |
 | ![image](https://user-images.githubusercontent.com/68702877/174038357-fed32ffb-1a0a-4f00-b44a-aec64006e09e.png) |![image](https://user-images.githubusercontent.com/68702877/174038420-b8e9257d-a375-411a-b17e-7bcdc59759af.png)| ![image](https://user-images.githubusercontent.com/68702877/174038468-a8d47cb2-98fd-44a1-bd38-a3a6dad5f5ab.png)|
 
@@ -13,18 +13,21 @@ Two different images of a patient, taken at two different times, usually have si
 This is because the patient is in different poses, because of internal movements, e.g., breathing, and because of other
 physical changes that occurred in the time that passed between the scans. Registering the two images is needed to
 compare the content, e.g., track the differences, or to evaluate the efficacy of a treatment.
+
+In this project we ue retinal 2D scans
+
+
 Rigid registration consists of computing the translation and rotation that aligns two images assuming that the
 anatomical structures of interest retain their shape. Rigid registration of 2D images requires computing three
 parameters: two translations and one rotation, while 3D scans requires computing six parameters: three translations
 and three rotations.
 
 Rigid registration algorithms can be categorized into two groups: geometry and intensity based. In geometric-based
-algorithms, the features to be matched, e.g. points are first identified in each image and then paired. The sum of the
+algorithms, the features to be matched, e.g. points, are first identified in each image and then paired. The sum of the
 square distances between the points is then minimized to find the rigid transformation. In intensity-based algorithms,
 a similarity measure is defined between the images. The transformation that maximizes the similarity is the desired
 one. The rigid registration algorithms are iterative – in each step, a transformation is generated and tested to see if it
 reduces the sum of the squared distances between the points or increases the similarity between the images.
-
 
 
 ## Geometry-based Registration
@@ -32,11 +35,8 @@ reduces the sum of the squared distances between the points or increases the sim
 Algorithm:
 1.	Features Detecting - I used Sift.
 2.	Features Matching - I used KNN matching.
-3.	Pick matched points
-I picked matches (m1, m2) that pass the ratio test: 
-m1.distance / m2.distance < 0.75. 
-4.	Registration
-I calculate the registration matrix using the picked matches.
+3.	Pick matched points - I picked matches (m1, m2) that pass the ratio test: (m1.distance / m2.distance) < 0.75. 
+4.	Registration - I calculate the registration matrix using the picked matches. Algorithm is taken from page 5 in this article: https://igl.ethz.ch/projects/ARAP/svd_rot.pdf
 
 
 ![image](https://user-images.githubusercontent.com/68702877/174043592-1e24971b-9372-45d7-9dbd-ee24d6315115.png)
