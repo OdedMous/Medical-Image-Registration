@@ -11,6 +11,14 @@ The goal of this project is to implement an automatic registration between two o
 
 
 
+
+![image](https://user-images.githubusercontent.com/68702877/174042930-5048ac5d-a49c-4496-9440-a4e75d632318.png)
+
+
+
+
+
+
 |  |  |  |
 | ---  | ---  | --- |
 | A | B | C |
