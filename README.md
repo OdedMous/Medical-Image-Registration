@@ -14,9 +14,16 @@ The goal of this project is to implement automatic registration algorithms betwe
 
 Usually, there is significant movement between two images of the same patient taken at two different times. This is because the patient is in different poses, because of internal movements (e.g., breathing) and because of other physical changes that occurred in the time that passed between the scans. **Registering** the images allows one to perform a comparison between them, e.g. to track the differences, or to evaluate the efficacy of a treatment when baseline and follow-up images are provided.
 
-In this project we used pairs of **retinal 2D scans** of patients who suffered from age-related macular degeneration (AMD), an eye disease that causes vision loss. The first scan in each pair is a baseline image and the second is an image that was taken later on in time in order to examine how the disease has evolved.
+In this project we used pairs of **retinal 2D scans** of patients who suffered from wet age-related macular degeneration (wet AMD), an eye disease that causes blurred vision or a blind spot in the visual field. It's generally caused by abnormal blood vessels that leak fluid or blood into the macula.
+The first scan in each pair is a baseline image and the second is an image that was taken later on in time in order to examine how the disease has evolved.
+
+<a href="url"><img src=(http://url.to/image.png" align="left" height="48" width="48](https://user-images.githubusercontent.com/68702877/174074532-bb739f79-4683-4edd-ae1f-fcb19ecbecb7.png) ></a>
 
 ![image](https://user-images.githubusercontent.com/68702877/174074532-bb739f79-4683-4edd-ae1f-fcb19ecbecb7.png)
+
+
+![image](https://user-images.githubusercontent.com/68702877/174075445-96323638-dc92-44ae-8797-baed2aec0a6e.png)
+
 
 **Rigid Registration**
 
