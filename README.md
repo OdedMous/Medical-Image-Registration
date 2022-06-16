@@ -6,26 +6,23 @@
 
 
 ## Goal
-The goal of this project is to implement automatic registration algorithms between two retinal 2D scans. Two different techniques are used: geometry-based registration and intensity-based registration.
+The goal of this project is to implement automatic registration algorithms between two retinal 2D scans. Two different techniques are implemented: geometry-based registration and intensity-based registration.
 
 ## Background
 
 **Registration in Medicine**
 
-Two different images of a patient, taken at two different times, usually have significant movement between them.
-This is because the patient is in different poses, because of internal movements, e.g., breathing, and because of other
-physical changes that occurred in the time that passed between the scans. Registering the two images is needed to
-compare the content, e.g., track the differences, or to evaluate the efficacy of a treatment.
+Usually, there is significant movement between two images of the same patient taken at two different times. This is because the patient is in different poses, because of internal movements (e.g., breathing) and because of other physical changes that occurred in the time that passed between the scans. **Registering** the images allows one to perform a comparison between them, e.g. to track the differences, or to evaluate the efficacy of a treatment when baseline and follow-up images are provided.
 
-In this project we ue retinal 2D scans: one is a base-line image an the second is an image that was taken later on (a follow-up image).
+In this project we used pairs of **retinal 2D scans** of patients who suffered from age related macular degeneration (AMD), a condition of retinal atrophy that causes vision loss. The first scan in each pair is a baseline image and the second is an image that was taken later on in time in order to examine how the condition has evolved.
 
 **Rigid Registration**
 
 In this project we assume that the anatomical structures of interest in the images retain their shape, and hence a rigid transform is sufficient to align the two images. 
-Rigid registration consists of computing the translation and rotation. Rigid registration of 2D images requires computing three
-parameters: two translations and one rotation.
+Rigid registration consists of computing the translation and rotation. Rigid registration of 2D images requires computing **three
+parameters**: two translations and one rotation.
 
-Rigid registration algorithms can be categorized into two groups: geometry and intensity based. In geometric-based
+Rigid registration algorithms can be categorized into two groups: **geometry** and **intensity based**. In geometric-based
 algorithms, the features to be matched, e.g. points, are first identified in each image and then paired. The sum of the
 square distances between the points is then minimized to find the rigid transformation. In intensity-based algorithms,
 a similarity measure is defined between the images. The transformation that maximizes the similarity is the desired
@@ -39,7 +36,7 @@ Algorithm:
 1.	Features Detecting - I used Sift.
 2.	Features Matching - I used KNN matching.
 3.	Pick matched points - I picked matches (m1, m2) that pass the ratio test: (m1.distance / m2.distance) < 0.75. 
-4.	Registration - I calculate the registration matrix using the picked matches. Algorithm is taken from page 5 in this article: https://igl.ethz.ch/projects/ARAP/svd_rot.pdf
+4.	Registration - I calculate the registration matrix using the picked matches. The solution is based on SVD. See page 5 in this article: https://igl.ethz.ch/projects/ARAP/svd_rot.pdf
 
 
 ![image](https://user-images.githubusercontent.com/68702877/174043592-1e24971b-9372-45d7-9dbd-ee24d6315115.png)
