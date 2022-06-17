@@ -17,11 +17,9 @@ Usually, there is significant movement between two images of the same patient ta
 In this project we used pairs of **retinal 2D scans** of patients who suffered from wet age-related macular degeneration (wet AMD), an eye disease that causes blurred vision or a blind spot in the visual field. It's generally caused by abnormal blood vessels that leak fluid or blood into the macula.
 The first scan in each pair is a baseline image and the second is an image that was taken later on in time in order to examine how the disease has evolved.
 
-
-
-![e](https://user-images.githubusercontent.com/68702877/174078749-74593be7-3ffb-439d-a255-825a6fd989d5.png)
-
-![image](https://user-images.githubusercontent.com/68702877/174075445-96323638-dc92-44ae-8797-baed2aec0a6e.png)
+|Example of AMD | Example of |
+| ---  | ---  | 
+|![e](https://user-images.githubusercontent.com/68702877/174078749-74593be7-3ffb-439d-a255-825a6fd989d5.png)|![image](https://user-images.githubusercontent.com/68702877/174075445-96323638-dc92-44ae-8797-baed2aec0a6e.png)|
 
 
 **Rigid Registration**
