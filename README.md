@@ -57,22 +57,22 @@ Matches after steps 1-3. Red dots that has no  green line which connects between
 
 ## Intensity-based Registration
 
-Algorithm:
-0.	Get BL and FU retina blood vessels segmentaions.
-1.	For each angle in [-30, 30]:
-  •	Rotate FU segmentation in that angle
+Algorithm: </br>
+1.	Get BL and FU retina blood vessels segmentaions.
+2.	For each angle in [-30, 30]: </br>
+  •	Rotate FU segmentation in that angle </br>
   •	Perform cross-correlation between rotated FU segmentation and BL segmentation, and save the result in a list. 
-2.	Find the translation vector & angle which provided the minimum error.
+3.	Find the translation vector & angle which provided the minimum error.
 
 
-**Segment Retinal Blood Vessels**
-In this section I implemented an algorithm which gets an image of human retina, and oupts a segmentation of the blood vessels in the retina.
-Algorithm :
-0. Convert image from RGB to grayscale image.
-1. Contrast Enhancement – using CLAHE
-2. Background Exclusion
-3. Thresholding
-4. Morphological operations
+**Segment Retinal Blood Vessels** </br>
+In this section I implemented an algorithm which gets an image of human retina, and oupts a segmentation of the blood vessels in the retina. </br>
+Algorithm: </br>
+0. Convert image from RGB to grayscale image. </br>
+1. Contrast Enhancement – using CLAHE </br>
+2. Background Exclusion </br>
+3. Thresholding </br>
+4. Morphological operations </br>
 
 1.	Contrast Enhancement – using CLAHE
 In this step I apply on the image a type of histogram equalization named CLAHE (contrast-limited adaptive histogram equalization), in order to deepen the contrast of the image.
@@ -96,5 +96,4 @@ In this step I perform some morphological operations (such as opening and closin
 
 
 
-![image](https://user-images.githubusercontent.com/68702877/174043801-bec60e1f-e53b-4ef6-8bb7-31d3edfb7455.png)
 
