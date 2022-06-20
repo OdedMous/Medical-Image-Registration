@@ -42,10 +42,10 @@ reduces the sum of the squared distances between the points or increases the sim
 ## Geometry-based Registration
 
 Algorithm:
-1.	Features Detecting - I used Sift.
-2.	Features Matching - I used KNN matching.
+1.	Features Detecting - using SIFT algorithm.
+2.	Features Matching - using KNN matching.
 3.	Pick matched points - I picked matches (m1, m2) that pass the ratio test: (m1.distance / m2.distance) < 0.75. 
-4.	Registration - I calculate the registration matrix using the picked matches. The solution is based on SVD. See page 5 in this article: https://igl.ethz.ch/projects/ARAP/svd_rot.pdf
+4.	Registration - The registration matrix is calculated using the picked matches. The solution is based on SVD. See page 5 in this article: https://igl.ethz.ch/projects/ARAP/svd_rot.pdf
 
 
 ![image](https://user-images.githubusercontent.com/68702877/174043592-1e24971b-9372-45d7-9dbd-ee24d6315115.png)
