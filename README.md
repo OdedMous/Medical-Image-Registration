@@ -61,8 +61,8 @@ Matches after steps 1-3. Red dots that has no  green line which connects between
 
 
 **Segment Retinal Blood Vessels** </br>
-Input: An image of human retina
-Outpit: A segmentation of the blood vessels in the retina. </br>
+Input: An image of human retina </br>
+Output: A segmentation of the blood vessels in the retina. </br>
 
 **Algorithm:** </br>
 1. Convert image from RGB to grayscale. 
