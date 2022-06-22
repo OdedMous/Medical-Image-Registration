@@ -17,7 +17,7 @@ Usually, there is significant movement between two images of the same patient ta
 In this project we used pairs of **retinal 2D scans** of patients who suffered from wet age-related macular degeneration (wet AMD), an eye disease that causes blurred vision or a blind spot in the visual field. It's generally caused by abnormal blood vessels that leak fluid or blood into the macula.
 The first scan in each pair is a baseline image and the second is an image that was taken later on in time in order to examine how the disease has evolved.
 
-|Example of AMD | Example of |
+| AMD condition | Example of blind spot |
 | ---  | ---  | 
 |![e](https://user-images.githubusercontent.com/68702877/174078749-74593be7-3ffb-439d-a255-825a6fd989d5.png)|![image](https://user-images.githubusercontent.com/68702877/174075445-96323638-dc92-44ae-8797-baed2aec0a6e.png)|
 
@@ -41,15 +41,10 @@ reduces the sum of the squared distances between the points or increases the sim
 
 ## Geometry-based Registration
 
-Algorithm:
+**Algorithm:**
 1.	Features Detecting - using SIFT algorithm.
 2.	Features Matching - using KNN matching.
-3.	Pick matched points - I picked matches (m1, m2) that pass the ratio test: (m1.distance / m2.distance) < 0.75. 
-4.	Registration - The registration matrix is calculated using the picked matches. The solution is based on SVD. See page 5 in this article: https://igl.ethz.ch/projects/ARAP/svd_rot.pdf
-
-
-![image](https://user-images.githubusercontent.com/68702877/174043592-1e24971b-9372-45d7-9dbd-ee24d6315115.png)
-
+3.	Homography Computation - The registration matrix is calculated using the picked matches. RANSAC algorithm is used in order to handle outlier matches. The RANSAC algorithm is implemented using a solution which based on SVD, see page 5 in this article: https://igl.ethz.ch/projects/ARAP/svd_rot.pdf
 
 ![image](https://user-images.githubusercontent.com/68702877/174043318-035b3866-604e-44e2-84d0-2f09e7945f8b.png)
 
@@ -57,7 +52,7 @@ Matches after steps 1-3. Red dots that has no  green line which connects between
 
 ## Intensity-based Registration
 
-Algorithm: </br>
+**Algorithm:** </br>
 1.	Get BL and FU retina blood vessels segmentaions.
 2.	For each angle in [-30, 30]: </br>
   •	Rotate FU segmentation in that angle </br>
@@ -67,23 +62,13 @@ Algorithm: </br>
 
 **Segment Retinal Blood Vessels** </br>
 In this section I implemented an algorithm which gets an image of human retina, and oupts a segmentation of the blood vessels in the retina. </br>
-Algorithm: </br>
-0. Convert image from RGB to grayscale image. </br>
-1. Contrast Enhancement – using CLAHE </br>
-2. Background Exclusion </br>
-3. Thresholding </br>
-4. Morphological operations </br>
 
-1.	Contrast Enhancement – using CLAHE
-In this step I apply on the image a type of histogram equalization named CLAHE (contrast-limited adaptive histogram equalization), in order to deepen the contrast of the image.
-2.	Background Exclusion
-In this step I subtract from the image (from step 1) its blurred  image, in order to eliminating background variations in illumination such that the foreground objects (in our case the blood vessels) may be more easily analyzed.
-3.	Thresholding
-In this step I perform thresholding using isodata in order to select the threshold value. Note that before I do that, I blur the image.
-4.	Morphological operations
-In this step I perform some morphological operations (such as opening and closing) in order to discard noise.
-
-
+**Algorithm:** </br>
+1. Convert image from RGB to grayscale. 
+2.	Contrast Enhancement – In this step a type of histogram equalization named CLAHE (contrast-limited adaptive histogram equalization) is applied, in order to deepen the contrast of the image.
+3.	Background Exclusion - In this step I subtract from the image (from the previous step) its blurred  image, in order to eliminating background variations in illumination such that the foreground objects (in our case the blood vessels) may be more easily analyzed.
+4.	Thresholding - In this step thresholding is applied using isodata algorithm.
+5.	Morphological operations - In this step some morphological operations are performed (such as opening and closing) in order to discard noise.
 
 |  |  |  |
 | ---  | ---  | --- |
