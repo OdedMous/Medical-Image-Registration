@@ -53,7 +53,7 @@ Matches after steps 1-3. Red dots that has no  green line which connects between
 ## Intensity-based Registration
 
 **Algorithm:** </br>
-1.	Get BL and FU retina blood vessels segmentaions.
+1.	Get BL and FU retina blood vessels segmentaions (explained below).
 2.	For each angle in [-30, 30]: </br>
   •	Rotate FU segmentation in that angle </br>
   •	Perform cross-correlation between rotated FU segmentation and BL segmentation, and save the result in a list. 
@@ -61,7 +61,8 @@ Matches after steps 1-3. Red dots that has no  green line which connects between
 
 
 **Segment Retinal Blood Vessels** </br>
-In this section I implemented an algorithm which gets an image of human retina, and oupts a segmentation of the blood vessels in the retina. </br>
+Input: An image of human retina
+Outpit: A segmentation of the blood vessels in the retina. </br>
 
 **Algorithm:** </br>
 1. Convert image from RGB to grayscale. 
