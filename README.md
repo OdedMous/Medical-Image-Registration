@@ -44,7 +44,7 @@ reduces the sum of the squared distances between the points or increases the sim
 **Algorithm:**
 1.	Features Detecting - using SIFT algorithm.
 2.	Features Matching - using KNN matching.
-3.	Homography Computation - The registration matrix is calculated using the picked matches. RANSAC algorithm is used in order to handle outlier matches. The RANSAC algorithm is implemented using a solution which based on SVD, see page 5 in this article: https://igl.ethz.ch/projects/ARAP/svd_rot.pdf
+3.	Homography Computation - The registration matrix is calculated using the picked matches. RANSAC algorithm is used in order to handle outlier matches. The RANSAC algorithm is based on implementing the SVD solution following this article: https://igl.ethz.ch/projects/ARAP/svd_rot.pdf
 
 ![image](https://user-images.githubusercontent.com/68702877/174043318-035b3866-604e-44e2-84d0-2f09e7945f8b.png)
 
