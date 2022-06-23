@@ -48,7 +48,7 @@ reduces the sum of the squared distances between the points or increases the sim
 
 ![image](https://user-images.githubusercontent.com/68702877/174043318-035b3866-604e-44e2-84d0-2f09e7945f8b.png)
 
-Matches after steps 1-3. Red dots that has no  green line which connects between them are outliers matches.
+Illustration of the matches. Red dots that has no green line which connects between them are outliers matches.
 
 ## Intensity-based Registration
 
