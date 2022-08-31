@@ -42,9 +42,9 @@ reduces the sum of the squared distances between the points or increases the sim
 ## Geometry-based Registration
 
 **Algorithm:**
-1.	Features Detecting - using SIFT algorithm.
-2.	Features Matching - using NN matching: For each feature "a" in img1 take the two nearest features "a1","a2" in img2 and pair them if distance(a, a1) / distance(a, a2) < threshold. Meaning: We want that "a" has only a single match in img2. If it has two possible matches it means "a" isn't a good feature. "a" fulfills this property if distance(a, a1) is small and distance(a, a2) is large.
-3.	Homography Computation - The registration matrix is calculated using the picked matches. RANSAC algorithm is used in order to handle outlier matches. The RANSAC algorithm is based on implementing the SVD solution following this article: "Least-Squares Rigid Motion Using SVD" (https://igl.ethz.ch/projects/ARAP/svd_rot.pdf)
+1.	**Features Detecting** - using SIFT algorithm.
+2.	**Features Matching** - using NN matching: For each feature "a" in img1 take the two nearest features "a1","a2" in img2 and pair them if distance(a, a1) / distance(a, a2) < threshold. Meaning: We want that "a" has only a single match in img2. If it has two possible matches it means "a" isn't a good feature. "a" fulfills this property if distance(a, a1) is small and distance(a, a2) is large.
+3.	**Homography Computation** - The registration matrix is calculated using the picked matches. RANSAC algorithm is used in order to handle outlier matches. The RANSAC algorithm is using the closed-form solution (SVD solution) which I implemented according to this article: "Least-Squares Rigid Motion Using SVD" (https://igl.ethz.ch/projects/ARAP/svd_rot.pdf)
 
 ![image](https://user-images.githubusercontent.com/68702877/174043318-035b3866-604e-44e2-84d0-2f09e7945f8b.png)
 
